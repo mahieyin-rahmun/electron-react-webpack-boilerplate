@@ -17,26 +17,36 @@
   <a href="https://buymeacoffee.com/alexdevero" rel="nofollow"><img src="https://img.shields.io/badge/Coffee-Donate-%23FF813F.svg?logo=buy-me-a-coffee&style=flat" alt="buymeacoffee" data-canonical-src="https://img.shields.io/badge/Coffee-Donate-%23FF813F.svg?logo=buy-me-a-coffee&style=flat" style="max-width:100%;"></a>
 </p>
 
-## Minimal Electron, React and Webpack boilerplate
+## Minimal Electron, React and Webpack boilerplate (with added Redux support)
 
 Minimal Electron, React, PostCSS and Webpack boilerplate to help you get started with building your next app.
 
+Credit goes to: [Alex Devero](https://github.com/alexdevero/electron-react-webpack-boilerplate.git) for the base boilerplate with Electron, React and Webpack.
+
+**Changes in this repo**: Added support for Redux store with full access to Redux Devtools. See the diff [here](https://github.com/mahieyin-rahmun/electron-react-webpack-boilerplate/commits/master). Additionally, bumps in package dependency versions are also done.
+
+The classic Counter app is included as example with the basic Redux store, reducers, action types and action creators.
+
+### Screenshot
+
+![Counter Electron, React, Redux, and Webpack](https://i.ibb.co/1bFWFBw/counter-with-redux.png)
+
 ### Table of contents
 
-* [Install](#install)
-* [Usage](#usage)
-* [Add Sass](#add-sass)
-* [Change app title](#change-app-title)
-* [Contact and Support](#contact-and-support)
-* [Code of Conduct](#code-of-conduct)
-* [License](#license)
+- [Install](#install)
+- [Usage](#usage)
+- [Add Sass](#add-sass)
+- [Change app title](#change-app-title)
+- [Contact and Support](#contact-and-support)
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
 
 ### Install
 
 #### Clone this repo
 
 ```
-git clone https://github.com/alexdevero/electron-react-webpack-boilerplate.git
+git clone https://github.com/mahieyin-rahmun/electron-react-webpack-boilerplate.git
 ```
 
 #### Install dependencies
@@ -44,7 +54,9 @@ git clone https://github.com/alexdevero/electron-react-webpack-boilerplate.git
 ```
 npm install
 ```
+
 or
+
 ```
 yarn
 ```
@@ -56,7 +68,9 @@ yarn
 ```
 npm run start
 ```
+
 or
+
 ```
 yarn start
 ```
@@ -66,7 +80,9 @@ yarn start
 ```
 npm run package
 ```
+
 or
+
 ```
 yarn package
 ```
@@ -76,15 +92,19 @@ yarn package
 ```
 npm run build
 ```
+
 or
+
 ```
 yarn build
 ```
 
 #### Test the app (after `npm run build` || `yarn run build`)
+
 ```
 npm run prod
 ```
+
 ```
 yarn prod
 ```
@@ -93,7 +113,7 @@ yarn prod
 
 Adding Sass to boilerplate requires updating webpack configs and adding necessary loaders.
 
-1) To `webpack.build.config.js` and `webpack.dev.config.js` add new object to `rules`:
+1. To `webpack.build.config.js` and `webpack.dev.config.js` add new object to `rules`:
 
 ```JavaScript
 {
@@ -106,9 +126,9 @@ Adding Sass to boilerplate requires updating webpack configs and adding necessar
 }
 ```
 
-2) Install additional loaders for sass, `sass-loader` and `node-sass`.
+2. Install additional loaders for sass, `sass-loader` and `node-sass`.
 
-3) Rename all CSS file to `.scss`.
+3. Rename all CSS file to `.scss`.
 
 ### Change app title
 
@@ -146,9 +166,10 @@ plugins: [
 ## Contact and Support
 
 I want your feedback! Here's a list of different ways to me and request help:
-* Report bugs and submit feature requests to [GitHub issues](https://github.com/alexdevero/electron-react-webpack-boilerplate/issues).
+
+- Report bugs and submit feature requests to [GitHub issues](https://github.com/alexdevero/electron-react-webpack-boilerplate/issues).
 <!-- * For private communications email me at foo@mail.com. -->
-* And do not forget to follow [@alexdevero](https://twitter.com/alexdevero) on Twitter!
+- And do not forget to follow [@alexdevero](https://twitter.com/alexdevero) on Twitter!
 
 If you feel generous and want to show some extra appreciation:
 
