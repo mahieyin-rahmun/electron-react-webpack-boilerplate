@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const defaultInclude = path.resolve(__dirname, 'src');
 
 module.exports = {
+  mode: "production",
   module: {
     rules: [
       {
