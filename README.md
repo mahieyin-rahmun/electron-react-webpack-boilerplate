@@ -29,7 +29,7 @@ The classic Counter app is included as example with the basic Redux store, reduc
 
 ### Screenshot
 
-![Counter Electron, React, Redux, and Webpack](https://i.ibb.co/1bFWFBw/counter-with-redux.png)
+![Counter Electron, React, Redux, and Webpack](https://i.ibb.co/VQ78CHD/counter-with-redux.png)
 
 ### Table of contents
 
