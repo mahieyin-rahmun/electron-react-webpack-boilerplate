@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { incrementCounter, decrementCounter } from '../store/actions/counterActions';
+import { incrementCounter, decrementCounter, incrementIfOdd, incrementIfEven, incrementAsync } from '../store/actions/counterActions';
 import { connect } from 'react-redux'
 
 class Counter extends Component {
@@ -7,15 +7,31 @@ class Counter extends Component {
     super();
     this.onClickDecrement = this.onClickDecrement.bind(this);
     this.onClickIncrement = this.onClickIncrement.bind(this);
-  }
-
-  onClickDecrement() {
-    this.props.decrementCounter();  
+    this.onClickIncrementIfOdd = this.onClickIncrementIfOdd.bind(this);
+    this.onClickIncrementIfEven = this.onClickIncrementIfEven.bind(this);
+    this.onClickIncrementAsync = this.onClickIncrementAsync.bind(this);
   }
 
   onClickIncrement() {
     this.props.incrementCounter();
   }
+
+  onClickDecrement() {
+    this.props.decrementCounter();
+  }
+
+  onClickIncrementIfEven() {
+    this.props.incrementIfEven();
+  }
+
+  onClickIncrementIfOdd() {
+    this.props.incrementIfOdd();
+  }
+
+  onClickIncrementAsync() {
+    this.props.incrementAsync();
+  }
+
 
   render() {
     return (
@@ -25,7 +41,20 @@ class Counter extends Component {
         <button onClick={this.onClickIncrement}>Increment</button> {" "} {" "}
         <button onClick={this.onClickDecrement}>Decrement</button>
 
-        <br/>
+        <br />
+        <br />
+
+        {
+          this.props.isIncrementing ?
+            (
+              <p>Incrementing...</p>
+            ) : ""
+        }
+
+        <button onClick={this.onClickIncrementIfOdd}>Increment if Odd</button> {" "} {" "}
+        <button onClick={this.onClickIncrementIfEven}>Increment if Even</button> {" "} {" "}
+        <button onClick={this.onClickIncrementAsync}>Async Increment</button>
+        <br />
       </div>
     )
   }
@@ -33,9 +62,19 @@ class Counter extends Component {
 
 const mapStateToProps = (state, props) => {
   return {
-    count: state.counter.count
+    count: state.counter.count,
+    isIncrementing: state.notify.isIncrementing
   }
 }
 
 
-export default connect(mapStateToProps, { incrementCounter, decrementCounter })(Counter);
+export default connect(
+  mapStateToProps,
+  {
+    incrementCounter,
+    decrementCounter,
+    incrementIfEven,
+    incrementIfOdd,
+    incrementAsync
+  }
+)(Counter);
