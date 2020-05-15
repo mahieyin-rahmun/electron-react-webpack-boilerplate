@@ -39,9 +39,9 @@
   ],
   "main": "main.js",
   "scripts": {
-    "prod": "cross-env NODE_ENV=production webpack --mode production --config webpack.build.config.js && electron --noDevServer .",
+    "prod": "cross-env NODE_ENV=production webpack --config webpack.build.config.js && electron --noDevServer .",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js --mode development",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.build.config.js --mode production",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.build.config.js",
     "package": "npm run build",
     "postpackage": "electron-packager ./ --out=./builds"
   },
@@ -51,11 +51,13 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
     "babel-loader": "^8.1.0",
     "babili-webpack-plugin": "^0.1.2",
     "cross-env": "^7.0.2",
