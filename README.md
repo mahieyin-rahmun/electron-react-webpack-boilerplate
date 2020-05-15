@@ -23,7 +23,7 @@ Minimal Electron, React, PostCSS and Webpack boilerplate to help you get started
 
 Credit goes to: [Alex Devero](https://github.com/alexdevero/electron-react-webpack-boilerplate.git) for the base boilerplate with Electron, React and Webpack.
 
-**Changes in this repo**: Added support for Redux store with full access to Redux Devtools. See the diff [here](https://github.com/mahieyin-rahmun/electron-react-webpack-boilerplate/commits/master). Additionally, bumps in package dependency versions are also done.
+**Changes in this repo**: Added support for Redux store with full access to Redux Devtools. You can see the diff [here](https://github.com/alexdevero/electron-react-webpack-boilerplate/compare/master...mahieyin-rahmun:master). Additionally, bumps in package dependency versions are also done.
 
 The classic Counter app is included as example with the basic Redux store, reducers, action types and action creators.
 
